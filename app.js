@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 
 const app = express();
 app.set("view engine", "ejs");
-prompt.set("view", path.join(__dirname, "views"));
+app.set("view", path.join(__dirname, "views"));
 app.get("/", userRouter);
 
 app.listen(3000, () => {

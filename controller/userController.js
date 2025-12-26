@@ -1,8 +1,23 @@
-import { getBooksByCategory } from "../db/query.js";
+import { getAllCategories, getBooksByCategory } from "../db/query.js";
 
 const homeController = async (req, res) => {
-  const books = await getBooksByCategory("Self help");
-  res.send(books);
+  const allCategories = await getAllCategories();
+  const categorizedBooks = await getCategorizedBooks(allCategories, []);
+
+  console.log(categorizedBooks);
+  res.send(categorizedBooks);
 };
 
+async function getCategoryBooks(category) {
+  return await getBooksByCategory(category);
+}
+
+async function getCategorizedBooks(categories, arr) {
+  const bookPromises = categories.map(async (category) => {
+    arr.push(await getCategoryBooks(category.category));
+  });
+  await Promise.all(bookPromises);
+  arr = arr.filter((element) => element.length > 0);
+  return arr;
+}
 export { homeController };

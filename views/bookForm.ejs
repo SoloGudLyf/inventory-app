@@ -1,0 +1,42 @@
+<form action="updateBook" method="post">
+  <label for="name"
+    >Name:
+    <input
+      type="text"
+      id="name"
+      value="<%=book.name%>"
+      name="bookName" /></label
+  ><label for="author"
+    >Author:
+    <input type="text" id="author" name="author" value="<%=book.author%>" />
+  </label>
+  <label for="numOfPages">
+    Number of pages:
+    <input
+      type="text"
+      id="numOfPages"
+      name="numOfPages"
+      value="<%=book.num_of_pages%>"
+    /> </label
+  ><label for="numAvailable">
+    Number available:
+    <input
+      type="text"
+      name="numAvailable"
+      id="numAvailable"
+      value="<%=book.num_available%>"
+    /> </label
+  ><label for="price"
+    >Price:
+    <input
+      type="text"
+      id="price"
+      name="price"
+      value="<%=book.price%>"
+    /> </label
+  ><label for="ratings"
+    >Ratings:
+    <input type="text" id="ratings" name="ratings" value="<%=book.ratings%>"
+  /></label>
+  <button>Submit</button>
+</form>

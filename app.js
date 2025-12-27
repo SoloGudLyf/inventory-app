@@ -3,6 +3,7 @@ import { userRouter } from "./routes/userRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { updateBook } from "./controller/updateBook.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -11,6 +12,7 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.get("/", userRouter);
+app.get("/update", updateBook);
 
 app.use(express.urlencoded({ extended: true }));
 

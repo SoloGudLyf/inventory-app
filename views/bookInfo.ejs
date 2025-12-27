@@ -1,17 +1,24 @@
-<div class="book-info">
-  <h3><span class="book-prop"><%=book.name%></span>
-</h3>
+<div class="book-info <%=book.id%>">
+  <h3><span class="book-prop"><%=book.name%></span></h3>
   <p>
-    <span>Name: <span class="book-prop"><%=book.name%></span>
-    </span><span>Author: <span class="book-prop"><%=book.author%></span>
-        </span
-    ><span>Number of pages: <span class="book-prop"><%=book.num_of_pages%></span>
-        </span
-    ><span>Number available: <span class="book-prop"><%=book.num_available%></span>
-        </span
-    ><span>Price: <span class="book-prop"><%=book.price%></span>
-    </span><span>Ratings: <span class="book-prop"><%=book.ratings%></span>
-        </span
+    <span>Name: <span class="book-prop"><%=book.name%></span> </span
+    ><span>Author: <span class="book-prop"> <%=book.author%></span> </span
+    ><span
+      >Number of pages:
+      <span class="book-prop"><%=book.num_of_pages%></span> </span
+    ><span
+      >Number available:
+      <span class="book-prop"><%=book.num_available%></span> </span
+    ><span>Price: <span class="book-prop"><%=book.price%></span> </span
+    ><span>Ratings: <span class="book-prop"><%=book.ratings%></span> </span
     ><span></span>
+  </p>
+  <p>
+    <button>
+      <a href="/update?name=<%=book.name%>&category=<%=book.category%>"
+        >Update</a
+      >
+    </button>
+    <button>Delete</button>
   </p>
 </div>

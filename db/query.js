@@ -14,4 +14,13 @@ async function getAllCategories() {
   const { rows } = await pool.query("SELECT * FROM book_categories");
   return rows;
 }
-export { getBooksByCategory, getAllCategories };
+
+async function getBookInfo(name, category) {
+  const { rows } = await pool.query(
+    "SELECT * FROM books_info JOIN book_categories ON books_info.category=book_categories.id WHERE books_info.name=$1 AND book_categories.category=$2; ",
+    [name, category]
+  );
+  return rows;
+}
+
+export { getBooksByCategory, getAllCategories, getBookInfo };

@@ -1,0 +1,39 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 3px;
+  font-size: 1.15rem;
+}
+
+input {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: fit-content;
+  align-self: center;
+  margin-top: 7px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}

@@ -7,10 +7,8 @@
   </head>
   <body>
     <h1>Categories</h1>
-    <article>
-      <h1>books.category</h1>
-      <% books.forEach((book,index) => { %> <%- include("bookInfo",{book});%> <%
-      }); %>
-    </article>
+
+    <% allBooks.forEach((arr) => { %> <%- include('bookCategory', {arr}); %> <%
+    }); %>
   </body>
 </html>

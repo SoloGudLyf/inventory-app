@@ -1,0 +1,6 @@
+<article>
+  <h2><%=arr[0].category%></h2>
+
+  <% arr.forEach((book) => { %> <%- include('bookInfo', {book}); %> <%
+  }); %>
+</article>

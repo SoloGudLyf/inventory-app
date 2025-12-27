@@ -5,7 +5,7 @@ const homeController = async (req, res) => {
   const categorizedBooks = await getCategorizedBooks(allCategories, []);
 
   console.log(categorizedBooks);
-  res.send(categorizedBooks);
+  res.render("homePage.ejs", { allBooks: categorizedBooks });
 };
 
 async function getCategoryBooks(category) {

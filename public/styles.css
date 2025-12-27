@@ -1,0 +1,32 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+article {
+  display: flex;
+  gap: 15px;
+}
+
+p > span {
+  display: block;
+}
+
+h2,
+h1,
+h3 {
+  margin: 2px;
+  text-align: center;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+}
+
+.home {
+  margin-bottom: 5px;
+}
+
+.book-prop {
+  font-weight: bold;
+}

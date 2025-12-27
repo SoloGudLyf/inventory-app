@@ -14,6 +14,9 @@ app.get("/", userRouter);
 
 app.use(express.urlencoded({ extended: true }));
 
+const assetsPath = path.join(__dirname, "public");
+app.use(express.static(assetsPath));
+
 app.listen(3000, () => {
   console.log("Server started on port 3000");
 });

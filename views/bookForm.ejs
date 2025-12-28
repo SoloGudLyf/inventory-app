@@ -1,4 +1,4 @@
-<form action="/updateBook?id=<%=book.id%>" method="post">
+<form action="/<%=action%>?id=<%=book.id%>" method="post">
   <label for="name"
     >Name:
     <input
@@ -13,7 +13,7 @@
   <label for="numOfPages">
     Number of pages:
     <input
-      type="text"
+      type="number"
       id="numOfPages"
       name="numOfPages"
       value="<%=book.num_of_pages%>"
@@ -21,7 +21,7 @@
   ><label for="numAvailable">
     Number available:
     <input
-      type="text"
+      type="number"
       name="numAvailable"
       id="numAvailable"
       value="<%=book.num_available%>"
@@ -38,5 +38,10 @@
     >Ratings:
     <input type="text" id="ratings" name="ratings" value="<%=book.ratings%>"
   /></label>
+  <% if(category){%>
+  <label for="category"
+    >Category: <input type="text" id="category" name="category"
+  /></label>
+  <%}%>
   <button>Submit</button>
 </form>

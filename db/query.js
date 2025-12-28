@@ -34,10 +34,33 @@ async function updateTable(newValues) {
 async function deleteEntity(id) {
   await pool.query("DELETE FROM books_info WHERE name=$1", [id]);
 }
+
+async function addBook(bookInfo) {
+  await pool.query(
+    "INSERT INTO books_info (name,author,num_of_pages,num_available,price,ratings,category) VALUES ($1,$2,$3,$4,$5,$6,$7)",
+    [...bookInfo]
+  );
+}
+
+async function getCategoryId(name) {
+  const { rows } = await pool.query(
+    "SELECT id FROM book_categories WHERE category=$1;",
+    [name]
+  );
+  return rows;
+}
+
+async function createCategory(name) {
+  await pool.query("INSERT INTO book_categories (category) VALUES($1)", [name]);
+}
+
 export {
   getBooksByCategory,
   getAllCategories,
   getBookInfo,
   updateTable,
   deleteEntity,
+  addBook,
+  getCategoryId,
+  createCategory,
 };

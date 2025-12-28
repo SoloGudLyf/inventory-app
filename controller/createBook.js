@@ -11,7 +11,7 @@ const fillBookDetails = (req, res) => {
     ratings: "",
     category: "",
   };
-  res.render("bookForm", {
+  res.render("addBookPage", {
     book: emptyDetails,
     action: "createBook",
     category: "true",

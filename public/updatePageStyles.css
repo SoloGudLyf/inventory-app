@@ -33,7 +33,45 @@ button {
   margin-top: 7px;
 }
 
+.btn-add-book {
+  background-color: #2563eb; /* Modern Blue */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect - button gets slightly darker */
+.btn-add-book:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Active effect - looks "pressed" when clicked */
+.btn-add-book:active {
+  background-color: #1e40af;
+  transform: translateY(0);
+}
+
+/* Disabled state - used while the database is processing */
+.btn-add-book:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
 main {
   display: flex;
   justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }

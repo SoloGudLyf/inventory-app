@@ -2,17 +2,22 @@
   <label for="name"
     >Name:
     <input
+    required
       type="text"
       id="name"
       value="<%=book.name%>"
       name="bookName" /></label
   ><label for="author"
     >Author:
-    <input type="text" id="author" name="author" value="<%=book.author%>" />
+    <input type="text" id="author" 
+    required
+    name="author" value="<%=book.author%>" />
   </label>
   <label for="numOfPages">
     Number of pages:
     <input
+    required
+
       type="number"
       id="numOfPages"
       name="numOfPages"
@@ -21,6 +26,8 @@
   ><label for="numAvailable">
     Number available:
     <input
+    required
+
       type="number"
       name="numAvailable"
       id="numAvailable"
@@ -29,6 +36,8 @@
   ><label for="price"
     >Price:
     <input
+    required
+
       type="text"
       id="price"
       name="price"
@@ -36,12 +45,15 @@
     /> </label
   ><label for="ratings"
     >Ratings:
-    <input type="text" id="ratings" name="ratings" value="<%=book.ratings%>"
+    <input type="text" id="ratings" 
+    required
+    name="ratings" value="<%=book.ratings%>"
   /></label>
   <% if(category){%>
   <label for="category"
-    >Category: <input type="text" id="category" name="category"
+    >Category: <input type="text"     required
+    id="category" name="category"
   /></label>
   <%}%>
-  <button>Submit</button>
+  <button class="btn-add-book">Submit</button>
 </form>

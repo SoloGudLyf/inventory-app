@@ -30,3 +30,9 @@ body {
 .book-prop {
   font-weight: bold;
 }
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}

@@ -87,3 +87,10 @@ body {
   justify-content: flex-start;
   gap: 15px;
 }
+
+.book-info {
+  background-color: #f1f5f9;
+  padding: 7px;
+  border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.507);
+}

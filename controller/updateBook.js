@@ -6,11 +6,14 @@ const viewBookInfo = async (req, res) => {
   res.render("bookUpdatePage", {
     book: bookInfo[0],
     action: "updateBook",
-    category:""});
+    category: "",
+  });
 };
 
 const updateBook = async (req, res) => {
   const id = Number(req.query.id);
+  console.log(req.body);
+
   const newValues = [
     req.body.bookName,
     req.body.author,

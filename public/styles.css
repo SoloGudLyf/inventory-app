@@ -36,3 +36,54 @@ body {
   justify-content: center;
   gap: 15px;
 }
+
+.btn-add-book,
+.btn-update-book,
+.btn-delete-book {
+  background-color: #2563eb; /* Modern Blue */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect - button gets slightly darker */
+.btn-add-book:hover,
+.btn-update-book:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Active effect - looks "pressed" when clicked */
+.btn-add-book:active,
+.btn-update-book:active {
+  background-color: #1e40af;
+  transform: translateY(0);
+}
+
+.btn-delete-book {
+  background-color: rgb(204, 72, 72);
+}
+
+.btn-delete-book:hover {
+  background-color: rgb(204, 51, 51);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete-book:active {
+  background-color: #1e40af;
+  transform: translateY(0);
+}
+
+.home-btns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}

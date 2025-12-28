@@ -13,12 +13,16 @@
     ><span>Ratings: <span class="book-prop"><%=book.ratings%></span> </span
     ><span></span>
   </p>
-  <p>
-    <button>
-      <a href="/update?name=<%=book.name%>&category=<%=book.category%>"
-        >Update</a
-      >
-    </button>
-    <button><a href="/delete?name=<%=book.name%>">Delete</a></button>
-  </p>
+  <p></p>
+  <div class="home-btns">
+    <form action="/update">
+      <input type="hidden" name="name" value="<%=book.name%>" />
+      <input type="hidden" name="category" value="<%=book.category%>" />
+      <button class="btn-update-book">Update</button>
+    </form>
+    <form action="/delete">
+      <input type="hidden" name="name" value="<%=book.name%>" />
+      <button class="btn-delete-book">Delete</button>
+    </form>
+  </div>
 </div>

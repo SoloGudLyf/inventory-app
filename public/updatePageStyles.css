@@ -33,7 +33,9 @@ button {
   margin-top: 7px;
 }
 
-.btn-add-book {
+.btn-add-book,
+.btn-update-book,
+.btn-delete-book {
   background-color: #2563eb; /* Modern Blue */
   color: white;
   padding: 12px 24px;

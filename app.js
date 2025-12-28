@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { viewBookInfo } from "./controller/updateBook.js";
 import { updateBook } from "./controller/updateBook.js";
+import deleteBook from "./controller/deleteBook.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,6 +18,7 @@ app.set("view engine", "ejs");
 app.get("/", userRouter);
 app.get("/update", viewBookInfo);
 app.post("/updateBook", updateBook);
+app.get("/delete", deleteBook);
 
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));

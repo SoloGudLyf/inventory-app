@@ -5,14 +5,13 @@ async function getBooksByCategory(category) {
     "SELECT books_info.id AS book_id,name,author,num_of_pages,num_available,price,ratings,book_categories.category FROM books_info JOIN book_categories ON books_info.category=book_categories.id WHERE book_categories.category=$1",
     [category]
   );
-  console.log(rows);
 
   return rows;
 }
 
 async function getAllCategories() {
   const { rows } = await pool.query(
-    "SELECT * FROM book_categories ORDER BY category"
+    "SELECT * FROM book_categories ORDER BY LOWER(category) ASC,id ASC"
   );
   return rows;
 }
@@ -32,4 +31,13 @@ async function updateTable(newValues) {
   );
 }
 
-export { getBooksByCategory, getAllCategories, getBookInfo, updateTable };
+async function deleteEntity(id) {
+  await pool.query("DELETE FROM books_info WHERE name=$1", [id]);
+}
+export {
+  getBooksByCategory,
+  getAllCategories,
+  getBookInfo,
+  updateTable,
+  deleteEntity,
+};

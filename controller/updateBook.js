@@ -7,7 +7,6 @@ const viewBookInfo = async (req, res) => {
 };
 
 const updateBook = async (req, res) => {
-  console.log(req.body);
   const id = Number(req.query.id);
   const newValues = [
     req.body.bookName,
@@ -18,7 +17,6 @@ const updateBook = async (req, res) => {
     req.body.ratings,
     id,
   ];
-  console.log(newValues);
 
   await updateTable(newValues);
   res.redirect("/");

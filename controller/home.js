@@ -3,8 +3,7 @@ import { getAllCategories, getBooksByCategory } from "../db/query.js";
 const homeController = async (req, res) => {
   const allCategories = await getAllCategories();
   const categorizedBooks = await getCategorizedBooks(allCategories, []);
-  console.log(categorizedBooks);
-
+  
   res.render("homePage.ejs", { allBooks: categorizedBooks });
 };
 
